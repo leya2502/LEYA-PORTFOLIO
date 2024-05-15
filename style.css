@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url(fondo.jpg)
+    background: url(./IMAGES/fondo.jpg)
 }
 
 /* Estilos del header */
@@ -139,12 +139,6 @@ padding: 0 0 100px 0
     background-color: #ff5e1e; /* Cambio de color al pasar el cursor */
 }
 
-
-
-
-
-
-
 /* Estilos del footer */
 footer {
     background-color: #000bff;
@@ -174,8 +168,64 @@ footer ul li a i {
 
 
 h1 { font-align: center; padding:50px; }
+h3 { background-color: #a5e41f;
+    margin-bottom: 90px;
+    padding: 17px;
+    font-family: helvetica;
+    font-size: xx-large}
+.hi{
+    display: flex;
+    flex-direction: column;
+}
+h4{
+    font-size: xx-large;
+    padding-bottom: 60px;
+}
 
 .titulo {
     text-align: center; /* Alinear el texto al centro */
     font-size:23px;
 }
+
+/*know me*/
+.me{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: end;
+    margin-right: 130px;
+    line-height: 30px;
+}
+.leya{
+    width: 435px;
+    height: 1354px;
+    background-image:url(./IMAGES/Bio.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+.imge{
+    height: auto;
+background-image:url(./IMAGES/EDITORIALLLL.png);
+    background-position: center;
+    background-size: cover;
+    padding-top: 400px;
+    padding-bottom: 600px;
+    padding-right: 200px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    float: right; 
+    margin-top: 150px
+}
+.working{
+    display: flex;
+    justify-content: center;
+    height: 800px
+}
+
