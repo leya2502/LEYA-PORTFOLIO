@@ -1,10 +1,94 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>MI PÁGINA WEB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="contacto.html"><i class="fas fa-info-circle"></i></a></li>
+                <li><a href="knowme.html" class="know-me-btn">Know Me</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+    </header>
+
+ <div class="titulo"><h1>PORTAFOLIO</h1></div>
+
+
+    <!-- Slider -->
+    <div class="slider">
+        <img src="slide1.jpg" alt="Slide 1">
+        <img src="slide2.jpg" alt="Slide 2">
+        <img src="slide3.jpg" alt="Slide 3">
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="content">
+        <div class="card red">
+            <a href="branding.html">
+                <h2>Branding</h2>
+            </a>
+        </div>
+        <div class="card blue">
+            <a href="photoshop.html">
+                <h2>Photoshop</h2>
+            </a>
+        </div>
+        <div class="card yellow">
+            <a href="editoria.html">
+                <h2>Editorial</h2>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://web.whatsapp.com"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href=" https://www.linkedin.com"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slider img');
+
+        // Función para mostrar el slide actual
+        function showSlide() {
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[slideIndex].style.display = 'block';
+        }
+
+        // Función para avanzar al siguiente slide
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            showSlide();
+        }
+
+        // Función para retroceder al slide anterior
+        function prevSlide() {
+            slideIndex--;
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            showSlide();
+        }
+
+        // Mostrar el primer slide al cargar la página
+        showSlide();
+    </script>
 </body>
 </html>
